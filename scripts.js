@@ -1,8 +1,9 @@
 
 let CurrentPlayer = "X";
 
-let arr = Array(9).fill(null);
+let arr = Array(9).fill(null);  
 
+// This function is used to check who is WINNER or whether is DRAW .
 function CheckWinner(){
     if ( 
         (arr[0] !== null && arr[0] == arr[1] && arr[1] == arr[2]) || 
@@ -31,7 +32,9 @@ function CheckWinner(){
         return;
     }
 }
- 
+
+
+ // Function for click handling.
 function handleClick(el){
    const id = Number(el.id);
    if(arr[id] != null) return;
